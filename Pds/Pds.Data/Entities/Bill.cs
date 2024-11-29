@@ -16,6 +16,9 @@ public class Bill : EntityBase
     [Required]
     public BillStatus Status { get; set; }
         
+    /// <summary>
+    /// Status of the payment
+    /// </summary>
     [Required]
     public PaymentStatus PaymentStatus { get; set; }
         
