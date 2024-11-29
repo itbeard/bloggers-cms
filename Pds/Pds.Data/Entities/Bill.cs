@@ -10,6 +10,9 @@ public class Bill : EntityBase
     [Column(TypeName = "decimal(18,2)")]
     public decimal Value { get; set; }
 
+    /// <summary>
+    /// Status of the bill
+    /// </summary>
     [Required]
     public BillStatus Status { get; set; }
         
