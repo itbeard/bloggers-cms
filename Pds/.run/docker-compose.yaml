@@ -22,8 +22,9 @@ services:
     ports:
       - 5002:80
     environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:80
       - ASPNETCORE_ENVIRONMENT=Development
-      - AllowedOrigins__0=http://localhost:5000
+      - AllowedOrigins__0=http://localhost:5001
       - Auth0__Enabled=false
       - ConnectionStrings__DefaultConnection=Server=database;Initial Catalog=pds;User ID=sa;Password=123qweQWE;MultipleActiveResultSets=False; Trust Server Certificate=True
     build:
@@ -36,7 +37,7 @@ services:
       - api
     image: pds_web
     ports:
-      - 5000:80
+      - 5001:80
     environment:
       - ENVIRONMENT=DockerDevelopment
       - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
